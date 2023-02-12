@@ -1,0 +1,14 @@
+apiVersion: networking.istio.io/v1alpha3
+kind: Gateway
+metadata:
+  name: ingressgateway
+spec:
+  selector:
+    istio: ingressgateway
+  servers:
+  - hosts:
+    - "*.rnakamine.com"
+    port:
+      name: http
+      number: 80
+      protocol: HTTP
